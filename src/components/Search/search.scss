@@ -1,0 +1,45 @@
+@import '../../constants/scss.scss';
+.ic-search:before {
+  content: '\e000';
+}
+.ic-close:before {
+  content: '\6f';
+}
+.search-container {
+  max-width: 540px;
+  width: 540px;
+  .search {
+    display: flex;
+    border-radius: 5px;
+    background-color: var(--alpha-bg);
+    align-items: center;
+    color: var(--search-text);
+    padding: 10px 0;
+    border-radius: 20px;
+    &.is-collapse {
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      background-color: var(--primary-bg);
+      border: 1px solid transparent;
+    }
+    input {
+      margin: 0;
+      display: inline-block;
+      width: 95%;
+      font-size: 14px;
+      color: var(--search-text);
+      background: transparent;
+      outline: none;
+      background-clip: padding-box;
+      border: 0;
+      font-weight: 500;
+    }
+    .icon {
+      &.ic-close {
+        font-size: 14px;
+      }
+      font-size: 20px;
+      padding: 0 10px;
+    }
+  }
+}

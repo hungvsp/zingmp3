@@ -1,0 +1,198 @@
+@import '../../constants/scss.scss';
+.sidebar-container {
+  position: -webkit-absolute;
+  position: sticky;
+  top: 0;
+  overflow: hiidden;
+  height: 100vh;
+  &.has-player {
+    height: calc(100vh - 100px);
+  }
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    .logo {
+      background: var(--img-logo-mp3);
+      width: 120px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .nav-box {
+    &.is-border-bottom {
+      border-bottom: 1px solid var(--border-primary);
+    }
+    .nav-item {
+      &.active {
+        background-color: var(--alpha-bg);
+        border-left: 3px solid var(--purple-primary);
+        .icon,
+        .nav-text {
+          color: var(--text-item-hover) !important;
+        }
+      }
+      .nav-item-link {
+        display: flex;
+        align-items: center;
+        padding: 7px 25px;
+        .icon {
+          font-size: 24px;
+          margin-right: 10px;
+          color: var(--navigation-text);
+          img {
+            width: 24px;
+          }
+        }
+        .nav-text {
+          font-size: 13px;
+          font-weight: 700;
+          color: var(--navigation-text);
+        }
+      }
+      &:hover .nav-text,
+      &:hover .icon {
+        color: var(----text-item-hover);
+      }
+    }
+  }
+  .my-music-box {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    .title {
+      font-weight: 600;
+      padding: 7px 25px;
+    }
+    .nav-text {
+      font-weight: 400 !important;
+    }
+  }
+  .vip-banner-box {
+    padding: 10px 10px 0 10px;
+    display: block;
+    .vip-banner {
+      background: rgb(189, 105, 216);
+      background: linear-gradient(
+        317deg,
+        rgba(189, 105, 216, 1) 46%,
+        rgba(94, 76, 230, 1) 88%
+      );
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px 0;
+      .text {
+        padding: 10px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+      .btn-sign-vip {
+        &:hover {
+          background-color: #e6cb1b;
+        }
+        &:active {
+          background-color: #e6cb1b;
+        }
+        background-color: #ffdb00;
+        color: #32233d;
+        padding: 6px 35px;
+        font-weight: 600;
+        border-radius: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  .scroll-nav {
+    &.is-mark {
+      -webkit-mask-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 5%
+      );
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: var(--scroll-thumb-bg);
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: transparent;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border-radius: 3px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+  }
+  .add-playlist-box {
+    border-top: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary);
+    position: fixed;
+    bottom: 89px;
+    z-index: 9;
+    background: transparent;
+    opacity: 1;
+    .btn-add-playlist {
+      width: 240px;
+      padding: 0px 25px;
+      box-sizing: border-box;
+      background: var(--btn-add-playlist-bg);
+      display: flex;
+      align-items: center;
+      height: 54px;
+      .icon {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+      .text {
+        font-weight: 600;
+      }
+    }
+  }
+}
+.ic-24-LibraryTab:before {
+  content: '\e906';
+}
+.ic-24-HomeTab:before {
+  content: '\e905';
+}
+.ic-24-ChartTab:before {
+  content: '\e902';
+}
+.ic-24-RadioTab:before {
+  content: '\e924';
+}
+.ic-24-FeedTab:before {
+  content: '\e903';
+}
+.ic-24-NewReleaseTab:before {
+  content: '\e908';
+}
+.ic-24-GenreTab:before {
+  content: '\e904';
+}
+.ic-24-Top100Tab:before {
+  content: '\e925';
+}
+.ic-24-MVTab:before {
+  content: '\e907';
+}
+.ic-add:before {
+  content: '\62';
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { Row, Col } from 'react-flexbox-grid';
+
+import Home from './pages/Home';
+import Slide from './components/Slide';
+import SideBar from './components/SideBar';
+import Player from './components/Player';
+import Header from './components/Header';
+import Test from './pages/Test';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Row>
+      <Col className="col-sidebar-md">
+        <SideBar />
+      </Col>
+      <Col xs={10} md={10}>
+        <Row>
+          <Col xs={12} md={12} className="px-0">
+            <Header />
+          </Col>
+          <Col xs={12} md={12} className="px-0">
+            <Home />
+          </Col>
+          <Col xs={12} md={12} className="px-0">
+            <Test />
+          </Col>
+        </Row>
+      </Col>
+
+      <Col xs={12} md={12} className="px-0">
+        <Player />
+      </Col>
+    </Row>
   );
 }
 

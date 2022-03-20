@@ -1,0 +1,36 @@
+.slide-container {
+  .splide__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-color: hsla(0, 0%, 100%, 0.15);
+    .icon {
+      font-size: 31px;
+      height: 31px;
+      width: 31px;
+    }
+  }
+  .splide__slide {
+    overflow: hidden;
+    padding: 15px;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+.ic-go-left:before {
+  content: '\7a';
+}
+.ic-go-right:before {
+  content: '\41';
+}
+.splide__arrow--prev {
+  background: red;
+}
+.ic-song:before {
+  content: '\e004';
+}

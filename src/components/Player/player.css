@@ -1,0 +1,9 @@
+.player-container {
+  position: -webkit-fixed;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(45, 45, 45);
+  height: 90px;
+}
