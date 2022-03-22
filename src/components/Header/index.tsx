@@ -1,5 +1,5 @@
 import './header.scss';
-import iconTheme from '../../asset/imgIcon/theme.png';
+//import iconTheme from '../../asset/imgIcon/theme.png';
 import Search from '../Search';
 function Header() {
   return (
@@ -26,7 +26,7 @@ function Header() {
             <ul className="setting-box">
               <li className="setting-item">
                 <i className="icon">
-                  <img src={iconTheme} alt="" />
+                  {/* <img src={iconTheme} alt="" /> */}
                 </i>
               </li>
               <li className="setting-item">

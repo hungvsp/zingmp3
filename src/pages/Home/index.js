@@ -1,5 +1,7 @@
-import Slide from '../../components/Slide/index';
-function Home() {
+import React from 'react';
+import Slide from '../../components/Slide';
+const Home = (props) => {
+  const { src } = props;
   return (
     <div className="home-container">
       <div className="wapper-sub">
@@ -7,5 +9,5 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 export default Home;
