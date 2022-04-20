@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <video controls id="video">
+      <source
+        src="https://dd184.qeyryaffeer.xyz/dl/t4I1L-hQ9_g/1649928537/29edaadf223bc49b37ba315fe4d0ce8f38f5eaa8f7abbe4448831fb04bfdac8f?file=aHR0cHM6Ly9ycjQtLS1zbi00ZzVlZG5zci5nb29nbGV2aWRlby5jb20vdmlkZW9wbGF5YmFjaz9leHBpcmU9MTY0OTk0NjUzMSZlaT1ROXRYWXFPUUNNcWgxZ0xWOWJ2NEJBJmlwPTE5NS4yMDEuMTA5LjI5JmlkPW8tQUx0ZE9oNlRQUGJlZmlfNWFleUtMWldHVTNJMVFIejhUR0Iyc0IxUk52Z0QmaXRhZz0xOCZzb3VyY2U9eW91dHViZSZyZXF1aXJlc3NsPXllcyZtaD1QdiZtbT0zMSUyQzI5Jm1uPXNuLTRnNWVkbnNyJTJDc24tNGc1ZTZuejcmbXM9YXUlMkNyZHUmbXY9bSZtdmk9NCZwbD0yNCZnY3I9ZGUmaW5pdGN3bmRicHM9MzY2MjUwJnZwcnY9MSZtaW1lPXZpZGVvJTJGbXA0JmNucj0xNCZyYXRlYnlwYXNzPXllcyZkdXI9NjYxNy4yNjkmbG10PTE2NDQ1MjAxNTM3OTgzODcmbXQ9MTY0OTkyNDQ0NiZmdmlwPTImZmV4cD0yNDAwMTM3MyUyQzI0MDA3MjQ2JmJlaWRzPTI0MDY0ODI2JmM9QU5EUk9JRCZ0eHA9NjIxODIyNCZzcGFyYW1zPWV4cGlyZSUyQ2VpJTJDaXAlMkNpZCUyQ2l0YWclMkNzb3VyY2UlMkNyZXF1aXJlc3NsJTJDZ2NyJTJDdnBydiUyQ21pbWUlMkNjbnIlMkNyYXRlYnlwYXNzJTJDZHVyJTJDbG10JnNpZz1BT3EwUUo4d1JnSWhBT2ZyeHBjUWNka0FDY1lxdUlveTdyRm5lM0ZSdzBuM3hsVVVUb3BXV3pzMEFpRUFveGVzZ2xtWVFKckRUTFdpa3F2Zmc2czBZREMxdF9CVTNmelM4dW9KNVY0JTNEJmxzcGFyYW1zPW1oJTJDbW0lMkNtbiUyQ21zJTJDbXYlMkNtdmklMkNwbCUyQ2luaXRjd25kYnBzJmxzaWc9QUczQ194QXdSUUloQUtHbS1MQTBQRlhLQ1gxbFNBcWRCNkl2bFFqLVFNR0p3T3JRVUQwX1NUMkdBaUFXRUx6d3RUYjJPbXhqYmdOajVhczkzRTYwcGJ2RkE4LUQ2R3dMVkxwa1VBJTNEJTNEJmhvc3Q9cnI0LS0tc24tNGc1ZWRuc3IuZ29vZ2xldmlkZW8uY29tJm5hbWU9eTJtZXRhLmNvbSstK1BoaW0raCVjMyVhMG5oKyVjNCU5MSVlMSViYiU5OW5nK2hheSsyMDIwLStwaGltK2NoaSVlMSViYSViZnUrciVlMSViYSVhMXAraGF5JTdjK1lOK0ZpbG0uKDM2MHApLm1wNA"
+      />
+    </video>
+    <button id="btn">1200</button>
+    <div id="log"></div>
+    <script>
+      const video = document.querySelector('#video');
+      const eventLog = document.querySelector('#log');
+      function handleEvent(event) {
+        eventLog.textContent =
+          eventLog.textContent + `${event.type}\n`;
+      }
+      const handleClick = () => {
+        video.currentTime = 120;
+        video.load();
+      };
+      const btn = document.querySelector('#btn');
+      btn.addEventListener('click', handleClick);
+      video.addEventListener('loadstart', handleEvent);
+      // video.addEventListener('progress', handleEvent);
+      video.addEventListener('canplay', handleEvent);
+      video.addEventListener('loadeddata', (event) => {
+        console.log(
+          event,
+          'Yay! The readyState just increased to  ' +
+            'HAVE_CURRENT_DATA or greater for the first time.'
+        );
+      });
+      // video.addEventListener('canplaythrough', handleEvent);
+    </script>
+  </body>
+</html>

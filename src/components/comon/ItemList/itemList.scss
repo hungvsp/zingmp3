@@ -1,0 +1,40 @@
+@import '../../../constants/scss.scss';
+.icon-box {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.song-list-selection {
+  display: flex;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  &.is_hover {
+    &.active,
+    &.focus,
+    &:hover {
+      background-color: var(--alpha-bg);
+    }
+  }
+  .song-list-box-left {
+    align-items: center;
+    display: flex;
+    width: 50%;
+  }
+  .song-list-box-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    .duration {
+      color: var(--song-item-action);
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+}

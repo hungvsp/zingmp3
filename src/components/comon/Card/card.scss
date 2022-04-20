@@ -1,0 +1,23 @@
+@import '../../../constants/scss.scss';
+.card-container {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+
+  .card-content-box {
+    .sub-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      a {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+}

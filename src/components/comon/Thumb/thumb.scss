@@ -1,0 +1,102 @@
+@import '../../../constants/scss.scss';
+.playing {
+  .card-actions.active {
+    .icon-playing {
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .action-play {
+      display: none;
+    }
+  }
+}
+.no-playing {
+  .icon-playing {
+    display: none;
+  }
+  .action-play {
+    display: block;
+  }
+}
+.card-thumb-box {
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    .opacity-bg {
+      opacity: 1;
+    }
+    .card-actions.has-hover {
+      opacity: 1;
+    }
+  }
+
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-bottom: 100%;
+  height: 0;
+  .opacity-bg {
+    opacity: 0;
+  }
+  .card-actions.has-hover {
+    opacity: 0;
+  }
+  img {
+    transition: 0.5s;
+    width: 100%;
+  }
+}
+.card-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  &.active {
+    .btn-icon-action {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+  .btn-icon-action {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: var(--hover-tooltip-opacity);
+    }
+    .action-play {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.icon.ic-svg-play-circle {
+  background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v1.6.8/static/media/play.81e7696e.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ic-like:before {
+  content: '\3b';
+}
+.ic-ball {
+  width: 4px;
+  height: 4px;
+  margin-left: 2px;
+  background: #fff;
+  border-radius: 100%;
+}

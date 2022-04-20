@@ -1,13 +1,18 @@
 @import '../../constants/scss.scss';
-.sidebar-container {
-  position: -webkit-absolute;
-  position: sticky;
-  top: 0;
-  overflow: hiidden;
-  height: 100vh;
-  &.has-player {
+.has-player {
+  .sidebar-container {
     height: calc(100vh - 100px);
+    .add-playlist-box {
+      bottom: 89px;
+    }
   }
+}
+.sidebar-container {
+  overflow: hiidden;
+  width: 240px;
+  height: 100vh;
+  transition: 0.2s;
+
   background: var(--sidebar-bg);
   display: flex;
   flex-direction: column;
@@ -123,7 +128,7 @@
       transition: 0.3s;
     }
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 0px;
       background: transparent;
     }
 
@@ -140,14 +145,16 @@
 
     /* Handle on hover */
   }
+
   .add-playlist-box {
     border-top: 1px solid var(--border-primary);
     border-bottom: 1px solid var(--border-primary);
     position: fixed;
-    bottom: 89px;
+    bottom: 0px;
     z-index: 9;
     background: transparent;
     opacity: 1;
+
     .btn-add-playlist {
       width: 240px;
       padding: 0px 25px;
@@ -166,6 +173,50 @@
     }
   }
 }
+// reposive
+@media only screen and (max-width: 1112px) {
+  .sidebar-container {
+    width: 70px;
+
+    .logo {
+      display: none;
+    }
+    .logo-sm {
+      width: 50px;
+      height: 50px;
+      background-size: contain !important;
+      background-repeat: no-repeat;
+      background: url(https://zjs.zadn.vn/zmp3-desktop/releases/v1.6.19/static/media/icon_zing_mp3_60.f6b51045.svg);
+    }
+    .nav-box {
+      .nav-item {
+        padding: 15px 0;
+        .nav-item-link {
+          padding: 0;
+          justify-content: center;
+          width: 100%;
+          .nav-text {
+            display: none;
+          }
+          .icon-box {
+            display: flex;
+            justify-content: center;
+            .icon {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .btn-add-playlist {
+      width: 70px !important;
+      .text {
+        display: none;
+      }
+    }
+  }
+}
+
 .ic-24-LibraryTab:before {
   content: '\e906';
 }

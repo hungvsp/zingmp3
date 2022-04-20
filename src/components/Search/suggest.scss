@@ -1,0 +1,18 @@
+@import '../../constants/scss.scss';
+.suggest-item {
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--alpha-bg);
+  }
+  padding: 5px;
+  border-radius: 5px;
+}
+.key-box {
+  a {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
